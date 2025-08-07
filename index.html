@@ -1,88 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TPG527XL');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Fundraise Up GA Demo</title>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBPV2NSWE"></script>
+    <!-- ✅ Google Tag Manager: HEAD snippet -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-TTBPV2NSWE');
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KFQN34VF');
     </script>
+    <!-- End Google Tag Manager -->
   </head>
+
   <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPG527XL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- ✅ Google Tag Manager: BODY noscript -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFQN34VF"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
     <h1>Fundraise Up GA Integration Demo</h1>
 
-    <!-- Visible Donate Button -->
-    <a
-      id="donate-button"
-      href="#XJKDHSTQ"
-      style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; cursor: pointer;"
-    >
-      Donate Now
-    </a>
+    <!-- Fundraise Up Button (optional test) -->
+    <a href="#XJKDHSTQ">Donate Now</a>
 
-    <!-- Fundraise Up Widget Script -->
+    <!-- ✅ Fundraise Up Widget -->
     <script>
-      (function (w, d, s, n, a) {
-        if (!w[n]) {
-          var l = 'call,catch,on,once,set,then,track'.split(','),
-            i,
-            o = function (n) {
-              return typeof n === 'function'
-                ? o.l.push([arguments]) && o
-                : function () {
-                    return o.l.push([n, arguments]) && o;
-                  };
-            },
-            t = d.getElementsByTagName(s)[0],
-            j = d.createElement(s);
-          j.async = true;
-          j.src = 'https://cdn.fundraiseup.com/widget/' + a + '?mode=test';
-          t.parentNode.insertBefore(j, t);
-          o.s = Date.now();
-          o.v = 4;
-          o.h = w.location.href;
-          o.l = [];
-          for (i = 0; i < 7; i++) o[l[i]] = o(l[i]);
-          w[n] = o;
+      (function(w,d,s,n,a){
+        if(!w[n]){
+          var l='call,catch,on,once,set,then,track'.split(','),i,
+          o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+          :function(){return o.l.push([n,arguments])&&o}},
+          t=d.getElementsByTagName(s)[0],
+          j=d.createElement(s);
+          j.async=!0;
+          j.src='https://cdn.fundraiseup.com/widget/'+a+'?mode=test';
+          t.parentNode.insertBefore(j,t);
+          o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+          for(i=0;i<7;i++)o[l[i]]=o(l[i)];
+          w[n]=o
         }
-      })(window, document, 'script', 'FundraiseUp', 'AEMZUDUM');
+      })(window,document,'script','FundraiseUp','AEMZUDUM');
     </script>
 
-    <!-- GA Event Tracking -->
-    <script>
-      window.FundraiseUp = window.FundraiseUp || function () {
-        (window.FundraiseUp.q = window.FundraiseUp.q || []).push(arguments);
-      };
-
-      window.addEventListener('load', function () {
-        FundraiseUp('on', 'checkoutOpen', function () {
-          if (typeof gtag === 'function') {
-            gtag('event', 'donate_button_click', {
-              event_category: 'engagement',
-              event_label: 'FundraiseUp Checkout Opened',
-            });
-          }
-        });
-      });
-    </script>
   </body>
 </html>
+
 
