@@ -15,39 +15,47 @@
     <!-- End Google Tag Manager -->
   </head>
 
-  <body>
-    <!-- ✅ Google Tag Manager: BODY noscript -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFQN34VF"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager -->
+<body>
 
-    <h1>Fundraise Up GA Integration Demo</h1>
+  <h1>Fundraise Up GA Integration Demo</h1>
 
-    <!-- Fundraise Up Button (optional test) -->
-    <a href="#XJKDHSTQ">Donate Now</a>
+  <!-- Donate Button -->
+  <a href="#XJKDHSTQ" class="fu-widget-button">Donate Now</a>
 
-    <!-- ✅ Fundraise Up Widget -->
-    <script>
-      (function(w,d,s,n,a){
-        if(!w[n]){
-          var l='call,catch,on,once,set,then,track'.split(','),i,
-          o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
-          :function(){return o.l.push([n,arguments])&&o}},
-          t=d.getElementsByTagName(s)[0],
-          j=d.createElement(s);
-          j.async=!0;
-          j.src='https://cdn.fundraiseup.com/widget/'+a+'?mode=test';
-          t.parentNode.insertBefore(j,t);
-          o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
-          for(i=0;i<7;i++)o[l[i]]=o(l[i)];
-          w[n]=o
-        }
-      })(window,document,'script','FundraiseUp','AEMZUDUM');
-    </script>
+  <style>
+    .fu-widget-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0070f3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+  </style>
 
-  </body>
+  <!-- Fundraise Up Script -->
+  <script>
+    (function(w,d,s,n,a){
+      if(!w[n]){
+        var l='call,catch,on,once,set,then,track'.split(','),i,
+        o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+        :function(){return o.l.push([n,arguments])&&o}},
+        t=d.getElementsByTagName(s)[0],
+        j=d.createElement(s);
+        j.async=!0;
+        j.src='https://cdn.fundraiseup.com/widget/'+a+'?mode=test'; // test mode
+        t.parentNode.insertBefore(j,t);
+        o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+        for(i=0;i<7;i++)o[l[i]]=o(l[i)];
+        w[n]=o
+      }
+    })(window,document,'script','FundraiseUp','AEMZUDUM');
+  </script>
+
+</body>
+
 </html>
 
 
