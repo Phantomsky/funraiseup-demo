@@ -42,6 +42,24 @@ t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
 for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
 })(window,document,'script','FundraiseUp','AEMZUDUM');</script>
 <!-- End Fundraise Up -->
+<script>
+  window.FundraiseUp = window.FundraiseUp || function() {
+    (window.FundraiseUp.q = window.FundraiseUp.q || []).push(arguments);
+  };
+
+  // Push event to dataLayer when checkout opens
+  window.addEventListener('load', function () {
+    FundraiseUp('on', 'checkoutOpen', function () {
+      if (window.dataLayer) {
+        dataLayer.push({
+          event: 'donate_button_click',
+          fundraiseup_source: 'checkoutOpened'
+        });
+      }
+    });
+  });
+</script>
+  
   </script>
 
   <a href="#XJKDHSTQ" style="display: none"></a>
