@@ -35,4 +35,22 @@
   <!-- GA Tag manager snippet will be added here later -->
 
 </body>
+
+  <script>
+  window.FundraiseUp = window.FundraiseUp || function() {
+    (window.FundraiseUp.q = window.FundraiseUp.q || []).push(arguments);
+  };
+
+  // Listen for the checkout being opened
+  FundraiseUp('on', 'checkoutOpen', function() {
+    // When the checkout opens, send event to GA4
+    if (typeof gtag === 'function') {
+      gtag('event', 'donate_button_click', {
+        event_category: 'engagement',
+        event_label: 'FundraiseUp Checkout Opened',
+      });
+    }
+  });
+</script>
+
 </html>
